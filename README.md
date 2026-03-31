@@ -3,3 +3,4 @@
 项目过程:通过 DataX 完成历史全量同步，利用 Maxwell 解析 MySQL binlog 实现增量数据实时采集至 Kafka，再经 Flume 写入 HDFS，保障 ODS 层数据完整性与时效性；基于维度建模完成 ODS、DWD、DWS、ADS 四层设计，处理缓慢变化维；使用 Hive on Spark计算引擎 在 DataGrip 上进行数据清洗、多表关联与聚合计算，构建明细层与轻量聚合层；在 DWS 层按日、周、月粒度构建公共聚合指标，开发 ADS 层应用指标，涵盖门店销售额、订单量、热销商品、复购率等核心报表；编写 Shell 脚本封装各层 ETL 任务，通过 DolphinScheduler 配置任务依赖与定时调度，确保数据 T+1 准时产出。
 技术栈：Hadoop,zookeeper,MySQL,Hive,Maxwell,Flume,Kafka,Spark,DataX,DolphinScheduler,FindBI
 
+![4d71a3398c0c41711d4eded3d604332d](https://github.com/user-attachments/assets/82cd9af2-a94c-43e7-89ed-0ff5bd63843e)
